@@ -1,0 +1,8 @@
+stages:
+- name: build
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: yarn build
+timeout: 60
+notification: {}
