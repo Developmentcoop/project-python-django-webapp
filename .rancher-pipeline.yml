@@ -14,4 +14,9 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: maven:3-jdk-7
+      shellScript: mvn clean install
 notification: {}
